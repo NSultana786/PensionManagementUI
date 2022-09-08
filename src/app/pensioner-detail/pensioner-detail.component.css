@@ -1,0 +1,16 @@
+.pensioner {
+    /* The image used */
+    background:url("../../assets/images/pension.jpg") no-repeat center center fixed hsla(324, 65%, 89%, 0.848);
+    text-align:center;
+    background-size: contain;
+    background-position:top;
+    height:92vh;
+}
+.button{
+    color: blue;
+}
+.heading {
+    color: rgb(32, 172, 218);;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: bold;
+  }

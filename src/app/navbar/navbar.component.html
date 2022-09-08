@@ -1,0 +1,28 @@
+<mat-toolbar color="accent" >
+    <a 
+        [routerLink]="'/'"
+    mat-icon-button 
+    class="example-icon"
+     aria-label="Example icon-button with menu icon">
+      <mat-icon>account_balance</mat-icon>
+    </a>
+    <span>PMSPortal</span>
+    <span class="example-spacer"></span>
+    
+    <a
+    [routerLink]="'/login'"
+    mat-icon-button 
+    class="example-icon favorite-icon " 
+    aria-label="Example icon-button with login icon"
+    >
+     <mat-icon>login</mat-icon> 
+    </a>
+   Login
+  </mat-toolbar>
+  <!--<mat-toolbar color="primary">
+    <span><a mat-raised-button (click)="logoutUser()" routerLink="/">PMSPortal</a></span>
+    <span class="example-spacer"></span>
+    <a *ngIf="!loggedIn" mat-raised-button routerLink="/login">Login</a>
+    <a *ngIf="loggedIn" (click)="logoutUser()" mat-raised-button routerLink="/login">Logout</a>
+    </mat-toolbar>-->
+  

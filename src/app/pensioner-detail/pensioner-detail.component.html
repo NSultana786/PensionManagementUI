@@ -1,0 +1,75 @@
+
+<!-- <h1 style="text-align: center;color: green;">Pension Management System</h1> -->
+<div class="pensioner">
+    <div class="container" align="center" style="padding-left: 10% ;">
+        <div>
+            <br>
+            <h1 class="heading text-center">Enter Pensioner Details</h1>
+            
+            <form (ngSubmit)="onSubmit()" method="GET" name="pension" id="pension" class="form">
+                <div class="col-md-6" style="text-align: left;color: rgb(6, 37, 23);">
+                    <div class="form-group">
+                        <!--<label class="form-label">USERNAME : </label>-->
+                        <input type="text" class="form-control" name="name" [(ngModel)]="pensionDetails.name"
+                        placeholder="Enter UserName" required="" />
+                        <div *ngIf="pensionDetails.name == ''">
+                        
+                        </div>
+                    </div>
+                    <div class="form-group">
+                       <!-- <label class="form-label">DATE OF BIRTH : </label>-->
+                        <input type="text" class="form-control" name="dateOfBirth"
+                            [(ngModel)]="pensionDetails.dateOfBirth" placeholder="Date of Birth (dd-mm-yyyy)"
+                            required="" />
+                        <div *ngIf="pensionDetails.dateOfBirth == ''">
+                            
+                        </div>
+                    </div>
+                    <div class="form-group">
+                       <!-- <label class="form-label">PAN NUMBER : </label>-->
+                        <input type="text" class="form-control" name="panNumber" [(ngModel)]="pensionDetails.panNumber"
+                        placeholder="xxxxxxxxxxxxxxxx" required="" />
+                        <div *ngIf="pensionDetails.panNumber == ''">
+                            Pan Number must be Unique.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                       <!-- <label class="form-label">AADHAAR NUMBER : </label>-->
+                        <input type="text" class="form-control" name="adhar" [(ngModel)]="pensionDetails.aadhaarNumber"
+                        placeholder="xxxxxxxxxxxxxxxx" required="" />
+                        <div *ngIf="pensionDetails.aadhaarNumber == ''">
+                            Aadhaar Number must be Unique.
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <select name="typeOfPension" class="form-control" id="typeOfPension"
+                            [(ngModel)]="pensionDetails.typeOfPension">
+                            <option value="" disabled selected>Select Pension Type</option>
+                            <option value="Family pension">Family Pension</option>
+                            <option value="Self pension">Self Pension</option>
+                        </select><br>
+                    </div>
+                    <div class="form-group">
+                        <div style="text-align:center;">
+                            <div *ngIf="pensionerError==true">
+                                <h4 style="color:red; text-align:center">Please enter Correct Details</h4><br>
+                            </div>
+                            <div class="col">
+                                <button type="submit" class="btn btn-success" [disabled]="pensionDetails.dateOfBirth == ''||pensionDetails.aadhaarNumber==''||
+                                 pensionDetails.panNumber == ''||pensionDetails.name == ''" value="Submit">Submit</button>
+                            </div>
+                            <div *ngIf="pensionDetails.dateOfBirth == ''||pensionDetails.aadhaarNumber==''||
+                            pensionDetails.panNumber == ''||pensionDetails.name == ''">
+
+                                All fields are mandatory
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <br>
+
+        </div>
+    </div>
+</div>
